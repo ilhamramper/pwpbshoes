@@ -1,3 +1,4 @@
+<!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
@@ -12,7 +13,7 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item">
+    <li class="nav-item active">
         <a class="nav-link" href="{{ route('indexadmin') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
@@ -49,8 +50,7 @@
             <i class="fas fa-fw fa-wrench"></i>
             <span>Utilities</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-            data-parent="#accordionSidebar">
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Utilities:</h6>
                 <a class="collapse-item" href="utilities-color.html">Colors</a>
@@ -97,9 +97,24 @@
             <span>Charts</span></a>
     </li>
 
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#itemshop"
+            aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-shopping-bag"></i>
+            <span>Item Shop</span>
+        </a>
+        <div id="itemshop" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('dataItem') }}">Data Barang</a>
+                <a class="collapse-item" href="{{ route('createItem') }}">Tambah Barang</a>
+            </div>
+        </div>
+    </li>
+
     <!-- Nav Item - Tables -->
-    <li class="nav-item active">
-        <a class="nav-link" href="tables.html">
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('user.index') }}">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a>
     </li>
@@ -113,3 +128,4 @@
     </div>
 
 </ul>
+<!-- End of Sidebar -->

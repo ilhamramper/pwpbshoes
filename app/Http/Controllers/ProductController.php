@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function detail()
+    public function detail($id)
     {
-        return view('user.product-detail');
+        $item = Item::findOrFail($id);
+        return view('user.product-detail',compact('item'));
     }
     
     public function checkout()

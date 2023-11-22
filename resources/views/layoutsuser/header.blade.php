@@ -1,15 +1,17 @@
-@php
-    function setActive($routeName, $activePage = '')
-    {
-        return request()->routeIs($routeName) ? 'active' : $activePage;
-    }
+@if (!function_exists('setActive'))
+    @php
+        function setActive($routeName, $activePage = '')
+        {
+            return request()->routeIs($routeName) ? 'active' : $activePage;
+        }
 
-    // Tentukan halaman aktif berdasarkan rute saat ini
-    $activePage = request()->routeIs(['home', 'contact']) ? 'active' : '';
+        // Tentukan halaman aktif berdasarkan rute saat ini
+        $activePage = request()->routeIs(['home', 'contact']) ? 'active' : '';
 
-    // Periksa apakah salah satu submenu aktif di dalam "Shop"
-    $submenuActive = request()->routeIs(['shop', 'product.detail', 'product.checkout', 'confirmation']) ? 'active' : '';
-@endphp
+        // Periksa apakah salah satu submenu aktif di dalam "Shop"
+        $submenuActive = request()->routeIs(['shop', 'product.detail', 'product.checkout', 'confirmation']) ? 'active' : '';
+    @endphp
+@endif
 
 <!-- Start Header Area -->
 <header class="header_area sticky-header">
@@ -38,9 +40,6 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-item {{ setActive('shop') }}"><a class="nav-link"
                                         href="{{ route('shop') }}">Shop</a></li>
-                                <li class="nav-item {{ setActive('product.detail') }}"><a class="nav-link"
-                                        href="{{ route('product.detail') }}">Product
-                                        Details</a></li>
                                 <li class="nav-item {{ setActive('product.checkout') }}"><a class="nav-link"
                                         href="{{ route('product.checkout') }}">Product
                                         Checkout</a></li>

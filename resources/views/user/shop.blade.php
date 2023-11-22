@@ -39,7 +39,6 @@
                                 </li>
                             </ul>
                         </li>
-
                         <li class="main-nav-list"><a data-toggle="collapse" href="#meatFish" aria-expanded="false"
                                 aria-controls="meatFish"><span class="lnr lnr-arrow-right"></span>Meat and Fish<span
                                     class="number">(53)</span></a>
@@ -57,144 +56,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="main-nav-list"><a data-toggle="collapse" href="#cooking" aria-expanded="false"
-                                aria-controls="cooking"><span class="lnr lnr-arrow-right"></span>Cooking<span
-                                    class="number">(53)</span></a>
-                            <ul class="collapse" id="cooking" data-toggle="collapse" aria-expanded="false"
-                                aria-controls="cooking">
-                                <li class="main-nav-list child"><a href="#">Frozen Fish<span
-                                            class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Dried Fish<span
-                                            class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Fresh Fish<span
-                                            class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat Alternatives<span
-                                            class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="main-nav-list"><a data-toggle="collapse" href="#beverages" aria-expanded="false"
-                                aria-controls="beverages"><span class="lnr lnr-arrow-right"></span>Beverages<span
-                                    class="number">(24)</span></a>
-                            <ul class="collapse" id="beverages" data-toggle="collapse" aria-expanded="false"
-                                aria-controls="beverages">
-                                <li class="main-nav-list child"><a href="#">Frozen Fish<span
-                                            class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Dried Fish<span
-                                            class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Fresh Fish<span
-                                            class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat Alternatives<span
-                                            class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat<span
-                                            class="number">(11)</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="main-nav-list"><a data-toggle="collapse" href="#homeClean" aria-expanded="false"
-                                aria-controls="homeClean"><span class="lnr lnr-arrow-right"></span>Home and Cleaning<span
-                                    class="number">(53)</span></a>
-                            <ul class="collapse" id="homeClean" data-toggle="collapse" aria-expanded="false"
-                                aria-controls="homeClean">
-                                <li class="main-nav-list child"><a href="#">Frozen Fish<span
-                                            class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Dried Fish<span
-                                            class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Fresh Fish<span
-                                            class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat Alternatives<span
-                                            class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat<span
-                                            class="number">(11)</span></a></li>
-                            </ul>
-                        </li>
                         <li class="main-nav-list"><a href="#">Pest Control<span class="number">(24)</span></a></li>
-                        <li class="main-nav-list"><a data-toggle="collapse" href="#officeProduct" aria-expanded="false"
-                                aria-controls="officeProduct"><span class="lnr lnr-arrow-right"></span>Office
-                                Products<span class="number">(77)</span></a>
-                            <ul class="collapse" id="officeProduct" data-toggle="collapse" aria-expanded="false"
-                                aria-controls="officeProduct">
-                                <li class="main-nav-list child"><a href="#">Frozen Fish<span
-                                            class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Dried Fish<span
-                                            class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Fresh Fish<span
-                                            class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat Alternatives<span
-                                            class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat<span
-                                            class="number">(11)</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="main-nav-list"><a data-toggle="collapse" href="#beauttyProduct" aria-expanded="false"
-                                aria-controls="beauttyProduct"><span class="lnr lnr-arrow-right"></span>Beauty
-                                Products<span class="number">(65)</span></a>
-                            <ul class="collapse" id="beauttyProduct" data-toggle="collapse" aria-expanded="false"
-                                aria-controls="beauttyProduct">
-                                <li class="main-nav-list child"><a href="#">Frozen Fish<span
-                                            class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Dried Fish<span
-                                            class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Fresh Fish<span
-                                            class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat Alternatives<span
-                                            class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat<span
-                                            class="number">(11)</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="main-nav-list"><a data-toggle="collapse" href="#healthProduct" aria-expanded="false"
-                                aria-controls="healthProduct"><span class="lnr lnr-arrow-right"></span>Health
-                                Products<span class="number">(29)</span></a>
-                            <ul class="collapse" id="healthProduct" data-toggle="collapse" aria-expanded="false"
-                                aria-controls="healthProduct">
-                                <li class="main-nav-list child"><a href="#">Frozen Fish<span
-                                            class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Dried Fish<span
-                                            class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Fresh Fish<span
-                                            class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat Alternatives<span
-                                            class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat<span
-                                            class="number">(11)</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="main-nav-list"><a href="#">Pet Care<span class="number">(29)</span></a></li>
-                        <li class="main-nav-list"><a data-toggle="collapse" href="#homeAppliance" aria-expanded="false"
-                                aria-controls="homeAppliance"><span class="lnr lnr-arrow-right"></span>Home
-                                Appliances<span class="number">(15)</span></a>
-                            <ul class="collapse" id="homeAppliance" data-toggle="collapse" aria-expanded="false"
-                                aria-controls="homeAppliance">
-                                <li class="main-nav-list child"><a href="#">Frozen Fish<span
-                                            class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Dried Fish<span
-                                            class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Fresh Fish<span
-                                            class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat Alternatives<span
-                                            class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat<span
-                                            class="number">(11)</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="main-nav-list"><a class="border-bottom-0" data-toggle="collapse" href="#babyCare"
-                                aria-expanded="false" aria-controls="babyCare"><span
-                                    class="lnr lnr-arrow-right"></span>Baby Care<span class="number">(48)</span></a>
-                            <ul class="collapse" id="babyCare" data-toggle="collapse" aria-expanded="false"
-                                aria-controls="babyCare">
-                                <li class="main-nav-list child"><a href="#">Frozen Fish<span
-                                            class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Dried Fish<span
-                                            class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Fresh Fish<span
-                                            class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Meat Alternatives<span
-                                            class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#" class="border-bottom-0">Meat<span
-                                            class="number">(11)</span></a></li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
                 <div class="sidebar-filter mt-50">
@@ -254,398 +116,113 @@
             <div class="col-xl-9 col-lg-8 col-md-7">
                 <!-- Start Filter Bar -->
                 <div class="filter-bar d-flex flex-wrap align-items-center">
-                    <div class="sorting">
-                        <select>
-                            <option value="1">Default sorting</option>
-                            <option value="1">Default sorting</option>
-                            <option value="1">Default sorting</option>
-                        </select>
-                    </div>
-                    <div class="sorting mr-auto">
-                        <select>
-                            <option value="1">Show 12</option>
-                            <option value="1">Show 12</option>
-                            <option value="1">Show 12</option>
-                        </select>
-                    </div>
-                    <div class="pagination">
-                        <a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left"
-                                aria-hidden="true"></i></a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#" class="dot-dot"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-                        <a href="#">6</a>
-                        <a href="#" class="next-arrow"><i class="fa fa-long-arrow-right"
-                                aria-hidden="true"></i></a>
-                    </div>
+                    <form action="{{ route('shop') }}" method="GET"
+                        class="d-flex justify-content-between align-items-center">
+                        <div class="sorting">
+                            <select name="sorting_option">
+                                <option value="1" {{ request('sorting_option') == 1 ? 'selected' : '' }}>A - Z
+                                </option>
+                                <option value="2" {{ request('sorting_option') == 2 ? 'selected' : '' }}>Z - A
+                                </option>
+                                <option value="3" {{ request('sorting_option') == 3 ? 'selected' : '' }}>Cheap -
+                                    Expensive</option>
+                                <option value="4" {{ request('sorting_option') == 4 ? 'selected' : '' }}>Expensive -
+                                    Cheap</option>
+                            </select>
+                        </div>
+                        <div class="sorting mr-auto">
+                            <select name="items_per_page">
+                                <option value="10" {{ request('items_per_page') == 10 ? 'selected' : '' }}>Show 10
+                                </option>
+                                <option value="25" {{ request('items_per_page') == 25 ? 'selected' : '' }}>Show 25
+                                </option>
+                                <option value="100" {{ request('items_per_page') == 100 ? 'selected' : '' }}>Show 50
+                                </option>
+                            </select>
+                        </div>
+                        <button class="btn btn-warning mx-2 mt-2" type="submit">Apply</button>
+                    </form>
                 </div>
                 <!-- End Filter Bar -->
                 <!-- Start Best Seller -->
                 <section class="lattest-product-area pb-40 category-list">
                     <div class="row">
                         <!-- single product -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-product">
-                                <img class="img-fluid" src="{{ asset('karma/img/product/p1.jpg') }}" alt="">
-                                <div class="product-details">
-                                    <h6>addidas New Hammer sole
-                                        for Sports person</h6>
-                                    <div class="price">
-                                        <h6>$150.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                    <div class="prd-bottom">
-
-                                        <a href="" class="social-info">
-                                            <span class="ti-bag"></span>
-                                            <p class="hover-text">add to bag</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-heart"></span>
-                                            <p class="hover-text">Wishlist</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-sync"></span>
-                                            <p class="hover-text">compare</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-move"></span>
-                                            <p class="hover-text">view more</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single product -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-product">
-                                <img class="img-fluid" src="{{ asset('karma/img/product/p2.jpg') }}" alt="">
-                                <div class="product-details">
-                                    <h6>addidas New Hammer sole
-                                        for Sports person</h6>
-                                    <div class="price">
-                                        <h6>$150.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                    <div class="prd-bottom">
-
-                                        <a href="" class="social-info">
-                                            <span class="ti-bag"></span>
-                                            <p class="hover-text">add to bag</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-heart"></span>
-                                            <p class="hover-text">Wishlist</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-sync"></span>
-                                            <p class="hover-text">compare</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-move"></span>
-                                            <p class="hover-text">view more</p>
-                                        </a>
+                        @foreach ($items as $item)
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single-product">
+                                    <img class="img-fluid" src="{{ asset('storage/' . $item->image) }}"
+                                        alt="{{ $item->name }}" style="width: 280px; height: 280px; object-fit: fill;">
+                                    <div class="product-details">
+                                        <h6>{{ $item->name }}</h6>
+                                        <div class="price">
+                                            <h6>$ {{ $item->price }}</h6>
+                                            <h6 class="l-through">
+                                                @if ($item->discount !== null)
+                                                    $ {{ $item->discount }}
+                                                @else
+                                                    {{ $item->discount }}
+                                                @endif
+                                            </h6>
+                                        </div>
+                                        <div class="prd-bottom">
+                                            <a href="" class="social-info">
+                                                <span class="ti-bag"></span>
+                                                <p class="hover-text">Add To Bag</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr lnr-heart"></span>
+                                                <p class="hover-text">Wishlist</p>
+                                            </a>
+                                            <a href="{{ route('product.detail',$item->id) }}" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">View More</p>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- single product -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-product">
-                                <img class="img-fluid" src="{{ asset('karma/img/product/p3.jpg') }}" alt="">
-                                <div class="product-details">
-                                    <h6>addidas New Hammer sole
-                                        for Sports person</h6>
-                                    <div class="price">
-                                        <h6>$150.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                    <div class="prd-bottom">
-
-                                        <a href="" class="social-info">
-                                            <span class="ti-bag"></span>
-                                            <p class="hover-text">add to bag</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-heart"></span>
-                                            <p class="hover-text">Wishlist</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-sync"></span>
-                                            <p class="hover-text">compare</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-move"></span>
-                                            <p class="hover-text">view more</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single product -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-product">
-                                <img class="img-fluid" src="{{ asset('karma/img/product/p4.jpg') }}" alt="">
-                                <div class="product-details">
-                                    <h6>addidas New Hammer sole
-                                        for Sports person</h6>
-                                    <div class="price">
-                                        <h6>$150.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                    <div class="prd-bottom">
-
-                                        <a href="" class="social-info">
-                                            <span class="ti-bag"></span>
-                                            <p class="hover-text">add to bag</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-heart"></span>
-                                            <p class="hover-text">Wishlist</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-sync"></span>
-                                            <p class="hover-text">compare</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-move"></span>
-                                            <p class="hover-text">view more</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single product -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-product">
-                                <img class="img-fluid" src="{{ asset('karma/img/product/p5.jpg') }}" alt="">
-                                <div class="product-details">
-                                    <h6>addidas New Hammer sole
-                                        for Sports person</h6>
-                                    <div class="price">
-                                        <h6>$150.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                    <div class="prd-bottom">
-
-                                        <a href="" class="social-info">
-                                            <span class="ti-bag"></span>
-                                            <p class="hover-text">add to bag</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-heart"></span>
-                                            <p class="hover-text">Wishlist</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-sync"></span>
-                                            <p class="hover-text">compare</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-move"></span>
-                                            <p class="hover-text">view more</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single product -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-product">
-                                <img class="img-fluid" src="{{ asset('karma/img/product/p6.jpg') }}" alt="">
-                                <div class="product-details">
-                                    <h6>addidas New Hammer sole
-                                        for Sports person</h6>
-                                    <div class="price">
-                                        <h6>$150.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                    <div class="prd-bottom">
-
-                                        <a href="" class="social-info">
-                                            <span class="ti-bag"></span>
-                                            <p class="hover-text">add to bag</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-heart"></span>
-                                            <p class="hover-text">Wishlist</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-sync"></span>
-                                            <p class="hover-text">compare</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-move"></span>
-                                            <p class="hover-text">view more</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </section>
                 <!-- End Best Seller -->
                 <!-- Start Filter Bar -->
-                <div class="filter-bar d-flex flex-wrap align-items-center">
-                    <div class="sorting mr-auto">
-                        <select>
-                            <option value="1">Show 12</option>
-                            <option value="1">Show 12</option>
-                            <option value="1">Show 12</option>
-                        </select>
-                    </div>
+                <div class="filter-bar d-flex flex-wrap align-items-center mb-3">
                     <div class="pagination">
-                        <a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left"
-                                aria-hidden="true"></i></a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#" class="dot-dot"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-                        <a href="#">6</a>
-                        <a href="#" class="next-arrow"><i class="fa fa-long-arrow-right"
-                                aria-hidden="true"></i></a>
+                        @if ($items->lastPage() > 1)
+                            @if ($items->currentPage() > 1)
+                                <a href="{{ $items->previousPageUrl() }}&{{ http_build_query(request()->except('page')) }}"
+                                    class="prev-arrow">
+                                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                </a>
+                            @endif
+
+                            @for ($i = max(1, $items->currentPage() - 1); $i <= min($items->lastPage(), $items->currentPage() + 1); $i++)
+                                <a href="{{ $items->url($i) }}&{{ http_build_query(request()->except('page')) }}"
+                                    class="{{ $items->currentPage() == $i ? 'active' : '' }}">{{ $i }}</a>
+                            @endfor
+
+                            @if ($items->currentPage() < $items->lastPage())
+                                <a href="{{ $items->nextPageUrl() }}&{{ http_build_query(request()->except('page')) }}"
+                                    class="next-arrow">
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            @endif
+                        @elseif ($items->total() <= $items->perPage() && $items->total() > 0)
+                            <!-- Tampilkan hanya satu halaman jika produk sudah tampil semua -->
+                            <a href="{{ $items->url(1) }}&{{ http_build_query(request()->except('page')) }}"
+                                class="active">1</a>
+                        @else
+                            <!-- Tampilkan teks jika tidak ada produk -->
+                            <h5>Belum Ada Produk Yang Tersedia</h5>
+                        @endif
                     </div>
                 </div>
                 <!-- End Filter Bar -->
             </div>
         </div>
     </div>
+@endsection
 
-    <!-- Start related-product Area -->
-    <section class="related-product-area section_gap">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 text-center">
-                    <div class="section-title">
-                        <h1>Deals of the Week</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-9">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="{{ asset('karma/img/r1.jpg') }}" alt=""></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Black lace Heels</a>
-                                    <div class="price">
-                                        <h6>$189.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="{{ asset('karma/img/r2.jpg') }}" alt=""></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Black lace Heels</a>
-                                    <div class="price">
-                                        <h6>$189.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="{{ asset('karma/img/r3.jpg') }}" alt=""></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Black lace Heels</a>
-                                    <div class="price">
-                                        <h6>$189.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="{{ asset('karma/img/r5.jpg') }}" alt=""></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Black lace Heels</a>
-                                    <div class="price">
-                                        <h6>$189.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="{{ asset('karma/img/r6.jpg') }}" alt=""></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Black lace Heels</a>
-                                    <div class="price">
-                                        <h6>$189.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="{{ asset('karma/img/r7.jpg') }}" alt=""></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Black lace Heels</a>
-                                    <div class="price">
-                                        <h6>$189.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="{{ asset('karma/img/r9.jpg') }}" alt=""></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Black lace Heels</a>
-                                    <div class="price">
-                                        <h6>$189.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="{{ asset('karma/img/r10.jpg') }}" alt=""></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Black lace Heels</a>
-                                    <div class="price">
-                                        <h6>$189.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="{{ asset('karma/img/r11.jpg') }}" alt=""></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Black lace Heels</a>
-                                    <div class="price">
-                                        <h6>$189.00</h6>
-                                        <h6 class="l-through">$210.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="ctg-right">
-                        <a href="#" target="_blank">
-                            <img class="img-fluid d-block mx-auto" src="{{ asset('karma/img/category/c5.jpg') }}" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End related-product Area -->
+@section('scripts')
 @endsection

@@ -12,12 +12,12 @@ class adminTablescontroller extends Controller
 {
     public function index(){
     $users = User::paginate(10);
-    return view('admin.datauser',compact('users'));
+    return view('admin.DataUser.datauser',compact('users'));
     }
 
     public function create(){
         $users = User::all();
-        return view('admin.create',compact('users'));
+        return view('admin.DataUser.create',compact('users'));
     }
     public function store(Request $request): RedirectResponse
     {
@@ -50,7 +50,7 @@ class adminTablescontroller extends Controller
         $users = User::findOrFail($id);
 
         //render view with post
-        return view('admin.edit', compact('users'));
+        return view('admin.DataUser.edit', compact('users'));
     }
 
     public function update(Request $request, $id): RedirectResponse
