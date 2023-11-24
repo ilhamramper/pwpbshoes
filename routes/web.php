@@ -44,3 +44,4 @@ Route::delete('/barang/{id}', [ItemController::class, 'destroy'])->name('destroy
 //route for contack
 Route::resource('/contack',contackController::class);
 Route::resource('/masukan',adminMasukanController::class);
+Route::resource('/error',adminMasukanController::class);
