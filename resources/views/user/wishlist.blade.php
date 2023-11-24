@@ -66,7 +66,7 @@
                                     @foreach ($wishlistItems as $wishlistItem)
                                         <tr>
                                             <td class="product-col">
-                                                <div class="d-flex">
+                                                <div class="d-flex justify-content-center">
                                                     <img src="{{ asset('storage/' . $wishlistItem->item->image) }}"
                                                         alt="{{ $wishlistItem->item->name }}"
                                                         style="width: 150px; height: 150px; object-fit: fill;">
