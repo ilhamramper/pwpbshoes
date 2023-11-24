@@ -21,36 +21,121 @@
     <section class="cart_area">
         <div class="container">
             <div class="cart_inner">
+                <style>
+                    .table th,
+                    .table td {
+                        text-align: center;
+                        /* Center the content */
+                    }
+
+                    .product-col {
+                        width: 30%;
+                        /* Set the width for the Product column */
+                    }
+
+                    .name-col {
+                        width: 30%;
+                        /* Set the width for the Name column */
+                    }
+
+                    .price-col {
+                        width: 20%;
+                        /* Set the width for the Price column */
+                    }
+
+                    .actions-col {
+                        width: 20%;
+                        /* Set the width for the Actions column */
+                    }
+
+                    /* Optional: Add more styling as needed */
+                </style>
                 <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Product</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">#</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="{{ asset('karma/img/cart.jpg') }}" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <p>Minimalistic shop for multipurpose use</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$360.00</h5>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-warning"><span class="ti-bag"></span> Add To Bag</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    @if (Auth::check())
+                        @if (count($wishlistItems) > 0)
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="product-col">Product</th>
+                                        <th class="name-col">Name</th>
+                                        <th class="price-col">Price</th>
+                                        <th class="actions-col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($wishlistItems as $wishlistItem)
+                                        <tr>
+                                            <td class="product-col">
+                                                <div class="d-flex">
+                                                    <img src="{{ asset('storage/' . $wishlistItem->item->image) }}"
+                                                        alt="{{ $wishlistItem->item->name }}"
+                                                        style="width: 150px; height: 150px; object-fit: fill;">
+                                                </div>
+                                            </td>
+                                            <td class="name-col">
+                                                <h5>{{ $wishlistItem->item->name }}</h5>
+                                            </td>
+                                            <td class="price-col">
+                                                <h5>{{ $wishlistItem->item->price }}</h5>
+                                            </td>
+                                            <td class="actions-col">
+                                                <div class="d-flex">
+                                                    <button type="button" class="btn btn-warning">
+                                                        <span class="ti-bag"></span> Add To Bag
+                                                    </button>
+                                                    <form action="{{ route('destroyWishlist', $wishlistItem->id) }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger ml-1">
+                                                            <span class="ti-trash"></span> Delete
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="product-col">Product</th>
+                                        <th class="name-col">Name</th>
+                                        <th class="price-col">Price</th>
+                                        <th class="actions-col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="4" class="text-center">
+                                            <h3>Anda belum menambahkan apapun.</h3>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        @endif
+                    @else
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="product-col">Product</th>
+                                    <th class="name-col">Name</th>
+                                    <th class="price-col">Price</th>
+                                    <th class="actions-col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4" class="text-center">
+                                        <h3>Anda belum login, tidak ada data yang tersimpan.</h3>
+                                        <a href="{{ route('login') }}" class="btn btn-warning"><strong>Login</strong></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    @endif
                 </div>
             </div>
         </div>

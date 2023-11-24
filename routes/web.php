@@ -15,7 +15,6 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\adminTablesController;
 use App\Http\Controllers\contackController;
 
-
 Auth::routes();
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
@@ -24,8 +23,11 @@ Route::get('/shop', [ShopController::class, 'shop'])->name('shop');
 Route::get('/product/detail/{id}', [ProductController::class, 'detail'])->name('product.detail');
 Route::get('/product/checkout', [ProductController::class, 'checkout'])->name('product.checkout');
 Route::get('/cart', [CartController::class, 'cart'])->name('cart');
+Route::post('/cart/add/{id}', [CartController::class, 'addToCart'])->name('addToCart');
 Route::get('/confirmation', [CartController::class, 'confirmation'])->name('confirmation');
 Route::get('/wishlist', [WishlistController::class, 'wishlist'])->name('wishlist');
+Route::get('/wishlist/add/{id}',[WishlistController::class, 'store'])->name('addWishlist');
+Route::delete('/wishlist/{id}', [WishlistController::class, 'destroy'])->name('destroyWishlist');
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
 //route for admin

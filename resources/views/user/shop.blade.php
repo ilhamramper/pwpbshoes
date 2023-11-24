@@ -151,8 +151,10 @@
                         @foreach ($items as $item)
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-product">
-                                    <img class="img-fluid" src="{{ asset('storage/' . $item->image) }}"
-                                        alt="{{ $item->name }}" style="width: 280px; height: 280px; object-fit: fill;">
+                                    <a href="{{ route('product.detail', $item->id) }}"><img class="img-fluid"
+                                            src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->name }}"
+                                            style="width: 280px; height: 280px; object-fit: fill;">
+                                    </a>
                                     <div class="product-details">
                                         <h6>{{ $item->name }}</h6>
                                         <div class="price">
@@ -170,11 +172,12 @@
                                                 <span class="ti-bag"></span>
                                                 <p class="hover-text">Add To Bag</p>
                                             </a>
-                                            <a href="" class="social-info">
+                                            <a href="{{ route('addWishlist', ['id' => $item->id]) }}"
+                                                class="social-info">
                                                 <span class="lnr lnr-heart"></span>
                                                 <p class="hover-text">Wishlist</p>
                                             </a>
-                                            <a href="{{ route('product.detail',$item->id) }}" class="social-info">
+                                            <a href="{{ route('product.detail', $item->id) }}" class="social-info">
                                                 <span class="lnr lnr-move"></span>
                                                 <p class="hover-text">View More</p>
                                             </a>

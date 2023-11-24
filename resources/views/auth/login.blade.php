@@ -132,6 +132,10 @@
             @if ($errors->has('password'))
                 toastr.error("{{ $errors->first('password') }}", "Registration Error");
             @endif
+
+            @if ($errors->has('wishlist'))
+                toastr.error("{{ $errors->first('wishlist') }}", "Wishlist Error");
+            @endif
         })(jQuery);
     </script>
 </body>
