@@ -119,6 +119,18 @@
             <span>Tables</span></a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('contack.index') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Contack</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('masukan.index') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Masukan</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

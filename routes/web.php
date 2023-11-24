@@ -10,8 +10,11 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\adminIndexController;
+use App\Http\Controllers\adminMasukanController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\adminTablesController;
+use App\Http\Controllers\contackController;
+
 
 Auth::routes();
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -36,3 +39,6 @@ Route::post('/barang/store', [ItemController::class, 'store'])->name('storeItem'
 Route::get('/barang/{id}/edit', [ItemController::class, 'edit'])->name('editItem');
 Route::put('/barang/{id}', [ItemController::class, 'update'])->name('updateItem');
 Route::delete('/barang/{id}', [ItemController::class, 'destroy'])->name('destroyItem');
+//route for contack
+Route::resource('/contack',contackController::class);
+Route::resource('/masukan',adminMasukanController::class);
