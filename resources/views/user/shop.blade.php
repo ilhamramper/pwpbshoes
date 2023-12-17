@@ -158,19 +158,24 @@
                                     <div class="product-details">
                                         <h6>{{ $item->name }}</h6>
                                         <div class="price">
-                                            <h6>$ {{ $item->price }}</h6>
-                                            <h6 class="l-through">
-                                                @if ($item->discount !== null)
-                                                    $ {{ $item->discount }}
+                                            <h6>
+                                                @if ($item->discount === null)
+                                                    ${{ $item->price }}
                                                 @else
-                                                    {{ $item->discount }}
+                                                    ${{ $item->dprice }}
+                                                @endif
+                                            </h6>
+                                            <h6 class="l-through" style="color: red">
+                                                @if ($item->discount !== null)
+                                                    ${{ $item->price }}
+                                                @else
                                                 @endif
                                             </h6>
                                         </div>
                                         <div class="prd-bottom">
-                                            <a href="" class="social-info">
+                                            <a href="{{ route('addCart', ['id' => $item->id]) }}" class="social-info">
                                                 <span class="ti-bag"></span>
-                                                <p class="hover-text">Add To Bag</p>
+                                                <p class="hover-text">Cart</p>
                                             </a>
                                             <a href="{{ route('addWishlist', ['id' => $item->id]) }}"
                                                 class="social-info">
@@ -228,4 +233,15 @@
 @endsection
 
 @section('scripts')
+    @if (Session::has('success'))
+        <script>
+            toastr.success("{{ Session::get('success') }}", "Success");
+        </script>
+    @endif
+
+    @if (Session::has('error'))
+        <script>
+            toastr.error("{{ Session::get('error') }}", "Error");
+        </script>
+    @endif
 @endsection

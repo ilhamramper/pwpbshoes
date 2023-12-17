@@ -29,13 +29,19 @@
                 <div class="col-lg-5 offset-lg-1">
                     <div class="s_product_text">
                         <h3>{{ $item->name }}</h3>
-                        <h2>$ {{ $item->price }}</h2>
+                        <h2>
+                            @if ($item->discount === null)
+                                ${{ $item->price }}
+                            @else
+                                ${{ $item->dprice }}
+                            @endif
+                        </h2>
                         <ul class="list">
                             <li><a href="#">Stock : {{ $item->stock }}</a></li>
                         </ul>
                         <p>{{ $item->description }}</p>
                         <div class="card_area d-flex align-items-center">
-                            <a class="primary-btn" href="#">Add to Cart</a>
+                            <a class="primary-btn" href="{{ route('addCart', ['id' => $item->id]) }}">Add to Cart</a>
                             <a class="icon_btn" href="{{ route('addWishlist', ['id' => $item->id]) }}"><i
                                     class="lnr lnr lnr-heart"></i></a>
                         </div>
@@ -45,4 +51,18 @@
         </div>
     </div>
     <!--================End Single Product Area =================-->
+@endsection
+
+@section('scripts')
+    @if (Session::has('success'))
+        <script>
+            toastr.success("{{ Session::get('success') }}", "Success");
+        </script>
+    @endif
+
+    @if (Session::has('error'))
+        <script>
+            toastr.error("{{ Session::get('error') }}", "Error");
+        </script>
+    @endif
 @endsection

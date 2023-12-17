@@ -42,7 +42,7 @@
                         id="password_confirm" placeholder="Password Confirmation" required
                         autocomplete="new-password" />
                     <span data-toggle="#password_confirm"
-                        class="zmdi zmdi-eye-off field-icon toggle-password toggle-password"></span>
+                        class="zmdi zmdi-eye-off field-icon toggle-password-confirm"></span>
                 </div>
                 <div class="form-group">
                     <button type="submit" name="submit" id="submit" class="form-submit" value="register">Sign
@@ -62,9 +62,9 @@
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-input form-control @error('password') is-invalid @enderror"
-                        name="password" id="password" placeholder="Password" required
+                        name="password" id="password_login" placeholder="Password" required
                         autocomplete="current-password" />
-                    <span data-toggle="#password" class="zmdi zmdi-eye-off field-icon toggle-password"></span>
+                    <span data-toggle="#password_login" class="zmdi zmdi-eye-off field-icon toggle-password-login"></span>
                 </div>
                 <a href="#">Forgot your password?</a>
                 <div class="form-group">
@@ -117,6 +117,16 @@
                 }
             });
 
+            $(".toggle-password-login").click(function() {
+                $(this).toggleClass("zmdi-eye zmdi-eye-off");
+                var input = $($(this).data("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+            });
+
             @if ($errors->has('login'))
                 toastr.error("{{ $errors->first('login') }}", "Login Error");
             @endif
@@ -135,6 +145,10 @@
 
             @if ($errors->has('wishlist'))
                 toastr.error("{{ $errors->first('wishlist') }}", "Wishlist Error");
+            @endif
+
+            @if ($errors->has('cart'))
+                toastr.error("{{ $errors->first('cart') }}", "Cart Error");
             @endif
         })(jQuery);
     </script>

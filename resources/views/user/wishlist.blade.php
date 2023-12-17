@@ -25,30 +25,23 @@
                     .table th,
                     .table td {
                         text-align: center;
-                        /* Center the content */
                     }
 
                     .product-col {
                         width: 30%;
-                        /* Set the width for the Product column */
                     }
 
                     .name-col {
                         width: 30%;
-                        /* Set the width for the Name column */
                     }
 
                     .price-col {
                         width: 20%;
-                        /* Set the width for the Price column */
                     }
 
                     .actions-col {
                         width: 20%;
-                        /* Set the width for the Actions column */
                     }
-
-                    /* Optional: Add more styling as needed */
                 </style>
                 <div class="table-responsive">
                     @if (Auth::check())
@@ -76,19 +69,26 @@
                                                 <h5>{{ $wishlistItem->item->name }}</h5>
                                             </td>
                                             <td class="price-col">
-                                                <h5>{{ $wishlistItem->item->price }}</h5>
+                                                <h5>
+                                                    @if ($wishlistItem->item->discount === null)
+                                                        ${{ $wishlistItem->item->price }}
+                                                    @else
+                                                        ${{ $wishlistItem->item->dprice }}
+                                                    @endif
+                                                </h5>
                                             </td>
                                             <td class="actions-col">
-                                                <div class="d-flex">
-                                                    <button type="button" class="btn btn-warning">
-                                                        <span class="ti-bag"></span> Add To Bag
-                                                    </button>
+                                                <div class="d-flex justify-content-center">
+                                                    <a href="{{ route('addCart', ['id' => $wishlistItem->item->id]) }}"
+                                                        class="btn btn-warning">
+                                                        <span class="ti-bag"></span>
+                                                    </a>
                                                     <form action="{{ route('destroyWishlist', $wishlistItem->id) }}"
                                                         method="POST">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger ml-1">
-                                                            <span class="ti-trash"></span> Delete
+                                                            <span class="ti-trash"></span>
                                                         </button>
                                                     </form>
                                                 </div>
@@ -141,4 +141,18 @@
         </div>
     </section>
     <!--================End Cart Area =================-->
+@endsection
+
+@section('scripts')
+    @if (Session::has('success'))
+        <script>
+            toastr.success("{{ Session::get('success') }}", "Success");
+        </script>
+    @endif
+
+    @if (Session::has('error'))
+        <script>
+            toastr.error("{{ Session::get('error') }}", "Error");
+        </script>
+    @endif
 @endsection

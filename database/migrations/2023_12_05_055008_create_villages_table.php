@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('items', function (Blueprint $table) {
+        Schema::create('villages', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('district_id')->constrained('districts');
             $table->string('name');
-            $table->string('description');
-            $table->string('image')->nullable();
-            $table->integer('stock');
-            $table->decimal('price', 10, 2);
-            $table->integer('discount')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('villages');
     }
 };

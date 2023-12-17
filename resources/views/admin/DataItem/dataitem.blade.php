@@ -21,12 +21,18 @@
                                 <th>Gambar</th>
                                 <th>Deskripsi</th>
                                 <th>Stok</th>
-                                <th>Harga</th>
-                                <th>Harga Sebelum Diskon</th>
+                                <th>Harga Asli</th>
+                                <th>Harga Diskon</th>
+                                <th>Diskon</th>
                                 <th>#</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <style>
+                            .show-modal:hover {
+                                cursor: pointer;
+                            }
+                        </style>
+                        <tbody class="text-center">
                             @foreach ($items as $item)
                                 <tr>
                                     <td>{{ $item->name }}</td>
@@ -36,12 +42,19 @@
                                     </td>
                                     <td>{{ $item->description }}</td>
                                     <td>{{ $item->stock }}</td>
-                                    <td>$ {{ $item->price }}</td>
+                                    <td>${{ $item->price }}</td>
+                                    <td>
+                                        @if ($item->discount === null)
+                                            ---
+                                        @else
+                                            ${{ number_format($item->price * (1 - $item->discount / 100), 2) }}
+                                        @endif
+                                    </td>
                                     <td>
                                         @if ($item->discount !== null)
-                                            $ {{ $item->discount }}
+                                            {{ $item->discount }}%
                                         @else
-                                            {{ $item->discount }}
+                                            ---
                                         @endif
                                     </td>
                                     <td class="d-flex justify-content-center">

@@ -12,9 +12,4 @@ class ProductController extends Controller
         $item = Item::findOrFail($id);
         return view('user.product-detail',compact('item'));
     }
-    
-    public function checkout()
-    {
-        return view('user.product-checkout');
-    }
 }

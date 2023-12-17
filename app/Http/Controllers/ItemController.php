@@ -30,11 +30,13 @@ class ItemController extends Controller
             'stock' => 'required|integer',
             'price' => [
                 'required',
-                'regex:/^\$[0-9]+(\.[0-9]{1,2})?$/',
+                'regex:/^[0-9]+(?:\.[0-9]{1,2})?$/'
             ],
-            'discountedPrice' => [
+            'discount' => [
                 'nullable',
-                'regex:/^\$[0-9]+(\.[0-9]{1,2})?$/',
+                'integer',
+                'min:1',
+                'max:99',
             ],
         ]);
 
@@ -46,7 +48,9 @@ class ItemController extends Controller
         $item->image = $imageName;
         $item->stock = $request->stock;
         $item->price = $this->convertToDatabaseCurrency($request->price);
-        $item->discount = $request->discountedPrice ? $this->convertToDatabaseCurrency($request->discountedPrice) : null;
+        $item->discount = $request->discount ?? null;
+        $item->dprice = $item->discount !== null ? $item->price - ($item->price * $item->discount / 100) : null;
+
         $item->save();
 
         return redirect()->route('dataItem')->with('success', 'Item berhasil disimpan');
@@ -69,11 +73,13 @@ class ItemController extends Controller
             'stock' => 'required|integer',
             'price' => [
                 'required',
-                'regex:/^\$[0-9]+(\.[0-9]{1,2})?$/',
+                'regex:/^[0-9]+(?:\.[0-9]{1,2})?$/',
             ],
-            'discountedPrice' => [
+            'discount' => [
                 'nullable',
-                'regex:/^\$[0-9]+(\.[0-9]{1,2})?$/',
+                'integer',
+                'min:1',
+                'max:99',
             ],
         ]);
 
@@ -87,12 +93,12 @@ class ItemController extends Controller
         $item->description = $request->description;
         $item->stock = $request->stock;
         $item->price = $this->convertToDatabaseCurrency($request->price);
-        $item->discount = $request->discountedPrice ? $this->convertToDatabaseCurrency($request->discountedPrice) : null;
+        $item->discount = $request->discount ?? null;
+        $item->dprice = $item->discount !== null ? $item->price - ($item->price * $item->discount / 100) : null;
         $item->save();
 
         return redirect()->route('dataItem')->with('success', 'Item berhasil diperbarui');
     }
-
 
     public function destroy($id)
     {
@@ -102,7 +108,6 @@ class ItemController extends Controller
 
         return redirect()->route('dataItem')->with('success', 'Item berhasil dihapus');
     }
-
 
     private function convertToDatabaseCurrency($input)
     {

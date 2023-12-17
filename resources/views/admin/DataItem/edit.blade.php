@@ -46,14 +46,20 @@
                     </div>
                     <div class="form-group">
                         <label for="price" class="form-control-label">Harga</label>
-                        <input type="text" id="price" name="price" placeholder="Contoh : $100 / $100.50"
-                            class="form-control" value="${{ old('price', $item->price) }}">
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="text" id="price" name="price" placeholder="Contoh: 100 / 100.50"
+                                class="form-control" value="{{ old('price', $item->price) }}">
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="discountedPrice" class="form-control-label">Harga Sebelum Diskon</label>
-                        <input type="text" id="discountedPrice" name="discountedPrice"
-                            placeholder="Contoh: $100 / $100.50 (Opsional diisi)" class="form-control"
-                            value="{{ $item->discount !== null ? '$' . old('discountedPrice', $item->discount) : old('discountedPrice', $item->discount) }}">
+                        <label for="discount" class="form-control-label">Diskon</label>
+                        <div class="input-group">
+                            <input type="text" id="discount" name="discount"
+                                placeholder="Contoh: 50 / 99, Minimal 1 dan Maksimal 99" class="form-control"
+                                value="{{ $item->discount !== null ? old('discount', $item->discount) : '' }}">
+                            <span class="input-group-text">%</span>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <a class="btn btn-warning mx-1" href="{{ route('editItem', $item->id) }}">Reset</a>

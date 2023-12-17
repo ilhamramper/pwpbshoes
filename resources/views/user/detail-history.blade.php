@@ -9,7 +9,8 @@
                     <h1>Confirmation</h1>
                     <nav class="d-flex align-items-center">
                         <a href="{{ route('home') }}">Home<span class="lnr lnr-arrow-right"></span></a>
-                        <a href="{{ route('confirmation') }}">Confirmation</a>
+                        <a href="{{ route('history') }}">History<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="javascript:void(0);" onclick="reloadCurrentRoute()">Detail History</a>
                     </nav>
                 </div>
             </div>
@@ -20,7 +21,6 @@
     <!--================Order Details Area =================-->
     <section class="order_details section_gap">
         <div class="container">
-            <h3 class="title_confirmation">Thank you. Your order has been received.</h3>
             <div class="row order_d_inner">
                 <div class="col-lg-6">
                     <div class="details_item">
@@ -29,12 +29,12 @@
                             <tr>
                                 <td style="width: 20%">Order Number</td>
                                 <td style="width: 5%">:</td>
-                                <th style="width: 55%">{{ $orderNumber }}</th>
+                                <th style="width: 55%">{{ $order->id_order }}</th>
                             </tr>
                             <tr>
                                 <td style="width: 20%">Date</td>
                                 <td style="width: 5%">:</td>
-                                <th style="width: 55%">{{ $date }}</th>
+                                <th style="width: 55%">{{ $order->created_at->format('Y-m-d') }}</th>
                             </tr>
                             <tr>
                                 <td style="width: 20%">Total</td>
@@ -44,7 +44,30 @@
                             <tr>
                                 <td style="width: 20%">Payment Method</td>
                                 <td style="width: 5%">:</td>
-                                <th style="width: 55%">{{ $paymentMethod }}</th>
+                                <th style="width: 55%">{{ $order->payment }}</th>
+                            </tr>
+                            <tr>
+                                <td style="width: 20%">Phone</td>
+                                <td style="width: 5%">:</td>
+                                <th style="width: 55%">{{ $order->phone }}</th>
+                            </tr>
+                            <tr>
+                                <td style="width: 20%">Status</td>
+                                <td style="width: 5%">:</td>
+                                <th style="width: 55%; font-weight: 500!important;">
+                                    @if ($order->status == 1)
+                                        <span
+                                            style="background-color: yellow; color: black; padding: 5px 10px; border-radius: 10px;">Diproses</span>
+                                    @elseif ($order->status == 2)
+                                        <span
+                                            style="background-color: green; color: white; padding: 5px 10px; border-radius: 10px;">Dikirim</span>
+                                    @elseif ($order->status == 3)
+                                        <span
+                                            style="background-color: red; color: white; padding: 5px 10px; border-radius: 10px;">Gagal</span>
+                                    @else
+                                        <span>Unknown Status</span>
+                                    @endif
+                                </th>
                             </tr>
                         </table>
                     </div>
@@ -56,27 +79,27 @@
                             <tr>
                                 <td style="width: 9%">Province</td>
                                 <td style="width: 5%">:</td>
-                                <th style="width: 55%">{{ $province }}</th>
+                                <th style="width: 55%">{{ $provinceName }}</th>
                             </tr>
                             <tr>
                                 <td style="width: 9%">Regency</td>
                                 <td style="width: 5%">:</td>
-                                <th style="width: 55%">{{ $regency }}</th>
+                                <th style="width: 55%">{{ $regencyName }}</th>
                             </tr>
                             <tr>
                                 <td style="width: 9%">District</td>
                                 <td style="width: 5%">:</td>
-                                <th style="width: 55%">{{ $district }}</th>
+                                <th style="width: 55%">{{ $districtName }}</th>
                             </tr>
                             <tr>
                                 <td style="width: 9%">Village</td>
                                 <td style="width: 5%">:</td>
-                                <th style="width: 55%">{{ $village }}</th>
+                                <th style="width: 55%">{{ $villageName }}</th>
                             </tr>
                             <tr>
                                 <td style="width: 9%">Address</td>
                                 <td style="width: 5%">:</td>
-                                <th style="width: 55%">{{ $address }}</th>
+                                <th style="width: 55%">{{ $order->address }}</th>
                             </tr>
                         </table>
                     </div>
@@ -147,4 +170,13 @@
         </div>
     </section>
     <!--================End Order Details Area =================-->
+@endsection
+
+@section('scripts')
+    <script>
+        function reloadCurrentRoute() {
+            var currentRoute = window.location.href;
+            window.location.href = currentRoute;
+        }
+    </script>
 @endsection

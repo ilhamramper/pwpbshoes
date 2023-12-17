@@ -43,7 +43,7 @@ class LoginController extends Controller
         }
 
         if (Auth::attempt($credentials)) {
-            return redirect()->route('home');
+            return redirect()->route('home')->with('success', 'Login successfully.');
         }
 
         return redirect('login')->withErrors([
@@ -59,6 +59,6 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return $this->loggedOut($request) ?: redirect('/');
+        return $this->loggedOut($request) ?: redirect('/')->with('success', 'Logout successfully.');
     }
 }

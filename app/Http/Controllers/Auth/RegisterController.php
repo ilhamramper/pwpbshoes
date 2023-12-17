@@ -8,10 +8,10 @@ use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -26,6 +26,9 @@ class RegisterController extends Controller
 
     protected function registered(Request $request, $user)
     {
+        // Log in the user after registration
+        Auth::login($user);
+
         return redirect()->route('home');
     }
 
@@ -41,12 +44,15 @@ class RegisterController extends Controller
             'password.min' => 'Password minimal 8 karakter',
         ]);
 
-        User::create([
+        $user = User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
         ]);
 
-        return redirect()->route('home');
+        // Log in the user after registration
+        Auth::login($user);
+
+        return redirect()->route('home')->with('success', 'Register successfully.');
     }
 }

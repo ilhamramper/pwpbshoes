@@ -5,13 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 
 class WishlistController extends Controller
 {
     public function wishlist()
-    {
-        $wishlistItems = Wishlist::where('user_id', Auth::id())->get();
+    {       
+        $wishlistItems = Wishlist::where('user_id', Auth::id())
+        ->orderBy('created_at', 'desc')
+        ->get();
 
         return view('user.wishlist', compact('wishlistItems'));
     }
@@ -20,7 +23,7 @@ class WishlistController extends Controller
     {
         if (!Auth::check()) {
             return redirect('login')->withErrors([
-                'wishlist' => 'Anda harus login terlebih dahulu'
+                'wishlist' => 'You must login first.'
             ]);
         }
 
@@ -37,7 +40,9 @@ class WishlistController extends Controller
             'item_id' => $id,
         ]);
 
-        return Redirect::back()->with('success', 'Item added to wishlist successfully.');
+        Session::flash('success', 'Item added to wishlist successfully.');
+
+        return Redirect::back();
     }
 
     public function destroy($id)
@@ -46,6 +51,8 @@ class WishlistController extends Controller
 
         $wishlistItem->delete();
 
-        return Redirect::back()->with('success', 'Item removed from wishlist successfully.');
+        Session::flash('success', 'Item removed from wishlist successfully.');
+
+        return Redirect::back();
     }
 }

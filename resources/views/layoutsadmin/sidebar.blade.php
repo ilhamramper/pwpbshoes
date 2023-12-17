@@ -99,8 +99,8 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#itemshop"
-            aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#itemshop" aria-expanded="true"
+            aria-controls="collapsePages">
             <i class="fas fa-fw fa-shopping-bag"></i>
             <span>Item Shop</span>
         </a>
@@ -112,22 +112,28 @@
         </div>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('dataOrder') }}">
+            <i class="fas fa-fw fa-shopping-basket"></i>
+            <span>Data Order</span></a>
+    </li>
+
     <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="{{ route('user.index') }}">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+            <i class="fas fa-fw fa-user"></i>
+            <span>Data User</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('contack.index') }}">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Contack</span></a>
+            <i class="fas fa-fw fa-address-card"></i>
+            <span>Contact</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('masukan.index') }}">
-            <i class="fas fa-fw fa-table"></i>
+            <i class="fas fa-fw fa-comments"></i>
             <span>Masukan</span></a>
     </li>
 
